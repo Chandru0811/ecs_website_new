@@ -1,0 +1,239 @@
+/* ///////////////////////////////////////////////////////////
+11. video
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+.eb_h2-video {
+  &-area {
+    position: relative;
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 50%;
+      width: 100%;
+      content: "";
+      background-color: #E9EAEB;
+    }
+  }
+  &-wrap {
+    max-width: 1660px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    padding-left: 30px;
+    padding-right: 30px;
+    img {
+      width: 100%;
+      border-radius: 20px;
+      min-height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+    @media #{$xs}{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  &-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 180px;
+    height: 180px;
+    border-radius: 180px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(10px);
+    display: grid;
+    place-items: center;
+    color: #fff;
+    svg {
+      width: 55px;
+    }
+    &:hover{
+        color: var(--clr-theme-primary-2);
+    }
+    @media #{$md}{
+      width: 120px;
+      height: 120px;
+      svg {
+        width: 45px;
+      }
+    }
+    @media #{$sm}{
+      width: 100px;
+      height: 100px;
+      svg {
+        width: 40px;
+      }
+    }
+    @media #{$xs}{
+      width: 90px;
+      height: 90px;
+      svg {
+        width: 35px;
+      }
+    }
+  }
+}
+
+
+// home 4 css start 
+
+.eb_h4-video {
+  &-wrap {
+    position: relative;
+    z-index: 1;
+    img {
+      width: 100%;
+      min-height: 200px;
+      height: 100%;
+      object-fit: cover;
+    }
+    a {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      content: "";
+      width: 180px;
+      height: 180px;
+      background-color: rgba(0, 0, 0, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #FFF;
+      font-family: $dmSans;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: normal;
+      @media #{$md}{
+        width: 150px;
+        height: 150px;
+        font-size: 18px;
+      }
+      @media #{$sm}{
+        width: 130px;
+        height: 130px;
+        font-size: 16px;
+      }
+      @media #{$xs}{
+        width: 120px;
+        height: 120px;
+        font-size: 14px;
+      }
+      @media #{$xxs}{
+        width: 100px;
+        height: 100px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+
+// home 5 css start
+
+.eb_h5-video {
+  &-wrap {
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+    padding-right: 20px;
+    &::before {
+      position: absolute;
+      width: 206px;
+      height: 206px;
+      left: 50%;
+      top: 50%;
+      background: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(7px);
+      content: "";
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      @media #{$sm}{
+        width: 140px;
+        height: 140px;
+      }
+    }
+    img {
+      width: 100%;
+      min-height: 350px;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  &-count {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    padding: 40px 80px;
+    @media #{$md}{
+      padding: 25px 35px;
+    }
+    @media #{$sm}{
+      padding: 20px 25px;
+    }
+    h2 {
+      font-family: $marcellus;
+      font-size: 100px;
+      color: #000;
+      line-height: 1;
+      margin-bottom: 10px;
+      @media #{$xl}{
+        font-size: 80px;
+      }
+      @media #{$md}{
+        font-size: 50px;
+      }
+      @media #{$sm}{
+        font-size: 40px;
+      }
+    }
+    span {
+      font-size: 24px;
+      line-height: 1;
+      display: block;
+      font-family: $marcellus;
+      color: #000;
+      @media #{$md}{
+        font-size: 20px;
+      }
+    }
+  }
+  &-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: var(--clr-theme-primary-5);
+    background: linear-gradient(140deg, #F94140 0%, #B71B1A 100%);
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    color: #fff;
+    z-index: 1;
+    @media #{$sm}{
+      width: 100px;
+      height: 100px;
+      font-size: 22px;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+}

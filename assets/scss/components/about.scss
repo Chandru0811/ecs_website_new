@@ -1,0 +1,189 @@
+/* ///////////////////////////////////////////////////////////
+04. about
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+
+.eb_h3-about{
+  &-img {
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+    img {
+      border-radius: 20px;
+      max-width: 410px;
+      width: 100%;
+      @media #{$lg}{
+        max-width: 330px;
+      }
+      @media #{$xxs}{
+        max-width: 190px;
+      }
+      &.eb_h3-about-img-inner {
+        position: absolute;
+        right: 0;
+        top: 0;
+        max-width: 330px;
+        @media #{$lg}{
+          max-width: 270px;
+        }
+        @media #{$xxs}{
+          max-width: 180px;
+        }
+      }
+    }
+    &-content {
+      background: #fff;
+      position: absolute;
+      right: 80px;
+      bottom: 95px;
+      padding: 20px 55px 30px 45px;
+      border-radius: 10px;
+      z-index: 1;
+      @media #{$xxs}{
+        padding: 20px 25px 20px 25px;
+        right: 35px;
+        bottom: 50px;
+      }
+      &::before {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #9DFF20;
+        border-radius: 10px;
+        width: calc(100% + 20px);
+        transform: translateX(-50%) rotate(-7deg);
+        z-index: -1;
+      }
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border-radius: 10px;
+        z-index: -1;
+      }
+      h3 {
+        color: #132A13;
+        font-family: $dmSans;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 5px;
+        @media #{$xxs}{
+          font-size: 35px;
+        }
+      }
+      span {
+        color: #5F6062;
+        font-family: $dmSans;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+        display: block;
+      }
+    }
+  }
+  &-wrap {
+    &.ml-50 {
+      @media #{$xl}{
+        margin-left: 20px;
+      }
+      @media #{$lg}{
+        margin-left: 0px;
+      }
+    }
+  }
+  &-content {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      list-style: none;
+      margin-bottom: 50px;
+      @media #{$lg}{
+        grid-template-columns: 1fr;
+      }
+      @media #{$md}{
+        grid-template-columns: 1fr 1fr;
+      }
+      @media #{$xxs}{
+        grid-template-columns: 1fr;
+      }
+      li {
+        color: rgba(11, 23, 40, 0.7);
+        font-family: $dmSans;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 44px;
+        text-transform: uppercase;
+        border-radius: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        height: 44px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        gap: 8px;
+        i {
+          width: 20px;
+          height: 20px;
+          flex-shrink: 0;
+          background: rgb(0, 139, 93);
+          display: grid;
+          place-items: center;
+          color: #fff;
+          border-radius: 50%;
+          font-size: 12px;
+        }
+      }
+    }
+    &-bottom {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      @media #{$xxs}{
+        flex-wrap: wrap;
+        .h3_about-btn {
+          order: 2;
+        }
+      }
+    }
+    &-admin {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      img {
+        width: 54px;
+        height: 54px;
+        flex-shrink: 0;
+        border-radius: 50%;
+      }
+      .eb_h3-admin-info {
+        h4 {
+          color: #000;
+          font-family: $dmSans;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 1.2;
+          margin-bottom: 5px;
+        }
+        span {
+          color: rgba(0, 0, 0, 0.7);
+          font-family: $dmSans;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+

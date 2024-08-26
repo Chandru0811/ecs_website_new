@@ -1,0 +1,343 @@
+
+/* ///////////////////////////////////////////////////////////
+06. service
+/////////////////////////////////////////////////////////// */ 
+@use '../abstracts/variables' as *;
+
+// service 
+
+.eb_h2-service {
+  &-item {
+    padding: 50px 40px 61px;
+    border-radius: 10px;
+    border: 1px solid rgba(16, 16, 16, 0.14);
+    @media #{$xxs}{
+      padding: 50px 30px 61px;
+    }
+    &-content {
+      h4 {
+        color: #101010;
+        font-family: $marcellus;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        &:hover a {
+          color: var(--clr-theme-primary-2);
+        }
+      }
+      p {
+        color: rgba(16, 16, 16, 0.6);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        margin-bottom: 0;
+      }
+    }
+    &-icon {
+      margin-bottom: 50px;
+      svg {
+        color: #101010;
+      }
+    }
+  }
+}
+
+
+// home 3 css start
+
+.eb_h3-service {
+  &-area {
+    background-color: #E3E8EA;
+  }
+  &-item {
+    background: #fff;
+    padding: 40px 40px 33px;
+    border-radius: 15px;
+    @media #{$md}{
+      padding: 40px 30px 33px;
+    }
+    &-head {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 25px;
+      svg {
+        color: #000;
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+      }
+      h3 {
+        color: #101010;
+        font-family: $dmSans;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        @media #{$lg}{
+          font-size: 20px;
+        }
+        &:hover a {
+          color: var(--clr-theme-primary-2);
+        }
+      }
+    }
+    p {
+      color: rgba(0, 0, 0, 0.6);
+      font-family: $inter;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-bottom: 26px;
+    }
+    &-btn {
+      a {
+        color: #000;
+        font-family: $inter;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: normal;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        &:hover {
+          color: var(--clr-theme-primary-2);
+        }
+      }
+    }
+  }
+}
+
+// home 4 css start
+.eb_h4-service {
+  &-area {
+    position: relative;
+    z-index: 1;
+  }
+  &-img {
+    &.ml-80 {
+      @media #{$xl}{
+        margin-left: 40px;
+      }
+      @media #{$lg}{
+        margin-left: 0;
+      }
+    }
+  }
+  &-wrap {
+    &.mr-80 {
+      @media #{$xl}{
+        margin-right: 40px;
+      }
+      @media #{$lg}{
+        margin-right: 0;
+      }
+    }
+  }
+  &-content {
+    .accordion-button {
+      background: transparent;
+      border: none;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 0;
+      box-shadow: none;
+      &::after {
+        content: "\2b";
+        background: none;
+        font-family: "Font Awesome 6 Pro";
+        font-size: 20px;
+        width: auto;
+        height: auto;
+        color: #000;
+      }
+      &:not(.collapsed)::after {
+        content: "\f068";
+        transform: none;
+        color: #000;
+      }
+      span {
+        color: #000;
+        font-family: $marcellus;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+        @media #{$xxs}{
+          font-size: 20px;
+        }
+      }
+      svg {
+        color: #000;
+        width: 55px;
+        height: auto;
+        @media #{$xxs}{
+          width: 30px;
+        }
+      }
+    }
+    .accordion-item {
+      border: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+      padding: 25px 0;
+      &:first-child {
+        border-top: 1px solid rgba(0, 0, 0, 0.14);
+      }
+    }
+    .accordion-body {
+      padding: 0;
+      margin-left: 75px;
+      margin-top: 10px;
+      @media #{$xxs}{
+        margin-left: 0;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 14px;
+        margin-right: 65px;
+        @media #{$xl}{
+          margin-right: 30px;
+        }
+        @media #{$lg}{
+          margin-right: 0;
+        }
+        li {
+          border-radius: 30px;
+          border: 1px solid rgba(0, 0, 0, 0.14);
+          height: 26px;
+          padding: 0 15px;
+          color: rgba(0, 0, 0, 0.6);
+          font-family: $dmSans;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: normal;
+          display: flex;
+          align-items: center;
+        }
+      }
+      p {
+        color: rgba(0, 0, 0, 0.6);
+        font-family: $dmSans;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 26px;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+// home 5 css start
+.eb_h5-service {
+  &-area {
+    position: relative;
+    z-index: 1;
+  }
+  &-img {
+    &.ml-60 {
+      @media #{$lg}{
+        margin-left: 20px;
+      }
+      @media #{$md}{
+        margin-left: 0;
+        text-align: center;
+      }
+    }
+    img {
+      @media #{$xxs}{
+        width: 100%;
+      }
+    }
+  }
+  &-content {
+    position: relative;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      left: 30px;
+      top: 0;
+      content: "";
+      height: 100%;
+      width: 1px;
+      background: rgba(0, 0, 0, 0.2);
+      @media #{$lg}{
+        left: 10px;
+      }
+      @media #{$md}{
+        display: none;
+      }
+    }
+    &.pl-80 {
+      @media #{$lg}{
+        padding-left: 40px;
+      }
+      @media #{$md}{
+        padding-left: 0;
+      }
+    }
+    .accordion-button {
+      background: transparent;
+      border: none;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 0;
+      box-shadow: none;
+      &::after {
+        display: none;
+      }
+      p {
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+        color: #000;
+        font-family: $marcellus;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.8;
+        margin-bottom: 0;
+        span {
+          color: rgba(0, 0, 0, 0.50);
+          display: block;
+          font-size: 20px;
+          margin-top: 5px;
+        }
+      }
+    }
+    .accordion-item {
+      border: 0;
+      .accordion-button {
+        padding: 10px 0;
+      }
+      &:first-child {
+        .accordion-button {
+        padding-top: 0;
+        }
+      }
+      &:last-child {
+        .accordion-button { 
+            &.collapsed {
+                padding-bottom: 0;
+            }
+
+        }
+        .accordion-body {
+            padding-bottom: 0;
+        }
+      }
+    }
+    .accordion-body {
+      padding: 0;
+      padding-bottom: 25px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
