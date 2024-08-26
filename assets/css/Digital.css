@@ -1,0 +1,351 @@
+.mainNav {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+  }
+  .nav-link {
+    color: black !important;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .nav-link:hover {
+    color: #fff8e9 !important;
+    background-color: #2c6bff;
+    border-radius: 5px;
+  }
+  .nav-link.active {
+    color: #fff8e9 !important;
+    background-color: #2c6bff;
+    border-radius: 5px;
+  }
+  .call-us-btn {
+    color: #fff8e9 !important;
+    background-color: #00d570;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 1.2rem;
+  }
+  .call-us-btn:hover {
+    background-color: #00c853;
+    border-color: #00c853;
+  }
+  .contact-number {
+    font-weight: 600;
+    color: black;
+    white-space: nowrap;
+  }
+  @media (min-width: 912px) {
+    .d-none.d-md-flex {
+      display: flex !important;
+    }
+    .d-md-none {
+      display: none !important;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .nav-toggler .call-us {
+      display: none;
+    }
+    .nav-toggler .num {
+      display: none;
+    }
+  }
+.stickySideContactButton {
+    position: fixed;
+    right: calc(25px);
+    top: 55%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: right center;
+    padding: 13px 20px;
+    background-color: #ff7f2a;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .stickySideContactButton:hover {
+    background-color: #ff7214;
+  }
+  
+  .whatsappStickySideButton {
+    position: fixed;
+    right: 0;
+    top: 60%;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+    text-align: center;
+    padding-top: 9px;
+  }
+  
+  .whatsappStickySideButton:hover {
+    background-color: #00b141;
+  }
+  
+.custom-card {
+    background-color: #f8f9fa;
+    border: none;
+    transition: transform 0.7s, box-shadow 0.5s;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .custom-card:hover {
+    background-color: #0e38b1;
+    color: white;
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .custom-card:hover .icon-rounded {
+    background-color: #0e38b1;
+    color: lightblue;
+  }
+
+  /* Align text */
+  .text-allign {
+    text-align: justify;
+  }
+
+  /* Text Styles */
+  .custom-card h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+  }
+
+  .custom-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color 0.3s;
+  }
+
+  /* Extra custom-card Styles */
+  .custom-card:hover h2,
+  .custom-card:hover p {
+    color: white;
+  }
+
+  .icon-rounded {
+    background-color: #f0f0f0;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-block;
+    color: #007bff;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  #backgroud-content {
+    background-color: #129ff72c;
+  }
+  .icon-heading {
+    font-size: 24px;
+    font-weight: 900;
+    color: #17b890;
+    font-family: "Nunito", sans-serif;
+  }
+  .submit-btn {
+    padding: 15px 25px;
+    color: black;
+    border: 2px solid #287698;
+    background-color: #fff;
+    border-radius: 4px;
+    font-style: 2rem;
+    font-weight: 500;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  .submit-btn:hover {
+    font-style: 2rem;
+    padding: 15px 25px;
+    color: white;
+    border: 2px solid #287698;
+    background-color: #4f4f65;
+    border-radius: 4px;
+  }
+  
+  .error {
+    color: red;
+  }
+  .input-field {
+    padding: 25px;
+    box-shadow: none !important;
+    border: 0.5px solid rgba(128, 128, 128, 0.624);
+    background-color: azure;
+    font-weight: medium;
+  }
+.heroBackground {
+    background: url("../images/digital/singapore_map.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .mainHeading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e255e;
+  }
+
+  .oneClick {
+    display: flex;
+    white-space: nowrap;
+    font-size: 84px;
+    font-weight: bold;
+    color: #0061fe;
+  }
+
+  .liveTag {
+    /* margin-left: 5px; */
+    /* padding: 0 0 0 340px; */
+
+  }
+
+  @media (min-width: 1200px) {
+    .liveTag {
+      width: 75%;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    .liveTag {
+      width: 140%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .liveTag {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .oneClick {
+      font-size: 60px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .oneClick {
+      font-size: 55px;
+    }
+  }
+
+  .imageText img {
+    margin-left: 10px; 
+  }
+
+  .imageText {
+    font-size: 12px !important;
+    color: #000;
+  }
+
+  .subHeadingHero {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1e255e;
+  }
+
+  @media (max-width: 400px) {
+    .subHeadingHero {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .subHeadingHero {
+      font-size: 35px;
+    }
+  }
+
+  .heroList {
+    color: rgba(30, 37, 94, 0.7);
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .primaryButton {
+    background-color: #0061fe;
+    font-family: "Poppins", sans-serif !important;
+    padding: 10px 15px;
+    border-radius: 30px;
+    width: 130px;
+  }
+  
+.footerBg {
+    background: linear-gradient(90deg, #1a4ed5 0%, #1c2792 100%);
+    color: var(--client-text-color);
+    padding: 20px 0;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    .mediaIconBg,
+    .mediaIconBg1 {
+        padding: 8px;
+        font-size: 1.3rem;
+    }
+
+    .footerBg p {
+        font-size: 0.85rem;
+    }
+
+    .footer-copyright {
+        flex-direction: column;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .mediaIconBg,
+    .mediaIconBg1 {
+        padding: 6px;
+        font-size: 1rem;
+    }
+
+    .footerBg h2 {
+        font-size: 1.5rem;
+    }
+
+    .footerBg h5 {
+        font-size: 1.2rem;
+    }
+
+    .footerBg p {
+        font-size: 0.8rem;
+    }
+
+    .footerBg h3 {
+        font-size: 1.2rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center !important;
+    }
+}
