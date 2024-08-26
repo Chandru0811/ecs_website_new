@@ -4,7 +4,7 @@
   top: 0;
   z-index: 9999;
   background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px) !important;
 }
 .nav-link {
   color: black !important;

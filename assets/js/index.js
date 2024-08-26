@@ -114,3 +114,21 @@ function submitLeadMagnet() {
         alert('Please enter a valid email address.');
     }
 }
+
+function showErrorModal() {
+    $("#errorModal").modal("show");
+  }
+  function closePopup() {
+    $("#errorModal").modal("hide");
+  }
+//   document.addEventListener("click", function () {
+//     showErrorModal(false);
+//   });
+
+  function showSuccessModal() {
+    $("#successModal").modal("show");
+  }
+
+  function closePopup() {
+    $("#successModal").modal("hide");
+  }
