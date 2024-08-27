@@ -67,7 +67,13 @@
 }
 
 .mainHeading {
-  font-size: 18px;
+  font-size: 34px;
+  font-weight: bold;
+  color: #1e255e;
+}
+
+.mainHeading2{
+    font-size: 18px;
   font-weight: bold;
   color: #1e255e;
 }
@@ -142,17 +148,24 @@
 }
 
 .heroList {
-  color: rgba(30, 37, 94, 0.7);
-  font-size: 16px;
+  color: rgba(0, 0, 0);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.promotionList {
+  color: rgba(0, 0, 0);
+  font-size: 20px;
   font-weight: 400;
 }
 
 .primaryButton {
   background-color: #0061fe;
   font-family: "Poppins", sans-serif !important;
-  padding: 10px 15px;
-  border-radius: 30px;
-  width: 130px;
+  padding: 13px 20px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  /* width: 120px; */
 }
 
 /* Promo1 */

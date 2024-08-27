@@ -150,13 +150,13 @@
     font-family: "Poppins", sans-serif !important;
     padding: 10px 15px;
     border-radius: 30px !important;
-    width: 130px;
+    /* width: 130px; */
   }
   
   /* Promo1 */
   .sale-pitch-bg-img {
-    background: url("../images/landingpage/Rectangle37.png");
-     min-width: 100%;
+    /* background: url("../images/landingpage/Rectangle37.png"); */
+     /* min-width: 100%; */
     background-repeat: no-repeat;
     min-height: 20vh;
     background-position: right;
