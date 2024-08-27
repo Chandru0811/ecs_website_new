@@ -2,21 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/custom.css">
-    <link rel="stylesheet" href="./assets/css/custom1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/custom.css">
+  <link rel="stylesheet" href="./assets/css/custom1.css">
+  <link rel="stylesheet" href="./assets/css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <!-- <section id="NavBar" class="container-fluid p-0 mainNav">
+  <!-- <section id="NavBar" class="container-fluid p-0 mainNav">
         <nav class="navbar  navbar-expand-lg navbar-light bg-light">
           <img src="./assets/images/landingpage/logo by me 3 60px 1.png" alt="logo...." class="img-fluid"
             style="max-width: 180px" />
@@ -56,8 +57,8 @@
           </div>
         </nav>
     
-        <!-- Offcanvas Menu for Small Screens -->
-        <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+         Offcanvas Menu for Small Screens -->
+  <!-- <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title">Menu</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -82,116 +83,128 @@
             </div>
           </div>
         </div> -->
-    
-      </section> -->
-    <div class="container my-5">
+
+  </section>
+  <div class="container my-5">
+    <div class="row">
+      <!-- Form Section -->
+      <div class="col-md-6 border rounded-5 bg-white p-5" style="border-radius: 35px;">
+        <span class="fw-bolder" style="color: #ff7f2a;">Get in Touch</span>
+        <h2 class="my-2 fw-bolder" style="word-spacing: 3px;">Let's Chat, Reach Out
+          <br /> to Us
+        </h2>
+        <p class="text-muted">Have questions or feedback? We're here to help. Send us a message,
+          and we'll respond within 24 hours.
+        </p>
+        <hr />
+        <form id="contactForm">
+
+          <div class="mb-3">
+            <label class="my-2">
+              Name<span class="text-danger">*</span>
+            </label>
+            <input type="text" placeholder="Name" class="form-control bg-light input-field" name="first_name"
+              id="first_name" required />
+          </div>
+
+          <div class="mb-3">
+            <label class="my-2">
+              Work Email<span class="text-danger">*</span>
+            </label>
+            <input type="email" class="form-control bg-light input-field" placeholder="Email" name="email" id="email"
+              required />
+          </div>
+
+          <div class="mb-3">
+            <label class="my-2">
+              Mobile<span class="text-danger">*</span>
+            </label>
+            <input type="text" class="form-control bg-light input-field" placeholder="Mobile No" name="mobile"
+              id="mobile" />
+          </div>
+
+          <div class="mb-3">
+            <label class="my-2">
+              Message<span class="text-danger">*</span>
+            </label>
+            <textarea class="form-control bg-light input-field" placeholder="Leave Us Message" name="description_info"
+              id="description_info" style="height: 120px"></textarea>
+          </div>
+
+          <button type="button" class="btn btn-primary bg-gradient w-100 my-3" id="submitBtn">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <div class="col-md-6 text-center">
         <div class="row">
-            <!-- Form Section -->
-            <div class="col-md-6 border rounded-5 bg-white p-5" style="border-radius: 35px;">
-                <span class="fw-medium" style="color: #FF7F2A;">Get in Touch</span>
-                <h2 class="my-2" style="word-spacing: 3px;">Let's Chat, Reach Out <br /> to Us</h2>
-                <p>Have questions or feedback? We're here to help. Send us a message, and we'll respond within 24 hours.
-                </p>
-                <hr />
-                <form id="contactForm">
-                    <div class="mb-3">
-                        <label htmlFor="first_name" className="my-2">
-                            Name<span class="text-danger">*</span>
-                        </label>
-                        <input type="text" class="form-control bg-light input-field" name="first_name" id="first_name"
-                            required />
+          <div class="col-12">
+            <img src="./assets/images/container/letsChart.png" alt="Contact" class="img-fluid mb-3"
+              style="border-radius: 35px;background-color: white;">
+          </div>
+          <div class="col-12">
+            <div class="card p-3 border-0 rounded-5" style="border-radius: 35px;">
+
+              <div class="row bg-light rounded-4 p-3 m-2">
+                <a href="mailto:info@ecscloudinfotech.com" class="text-decoration-none text-black" target="_blank">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="col-3 text-center">
+                      <div class="custom-circle ">
+                        <i class="fas fa-envelope"
+                          style="font-size: 30px; padding: 20px; border-radius: 50%; background-color: rgba(0, 123, 255, 0.1);"></i>
+                      </div>
                     </div>
-                    <div class="mb-3">
-                        <label htmlFor="first_name" className="my-2">
-                            Work Email<span class="text-danger">*</span>
-                        </label>
-                        <input type="email" class="form-control bg-light input-field" name="email" id="email"
-                            required />
+                    <div class="col-9 text-start">
+                      <h5 class="text-decoration-none text-black">Email</h5>
+                      <mailto:p>info@ecscloudinfotech.com</p>
                     </div>
-                    <div class="mb-3">
-                        <label htmlFor="first_name" className="my-2">
-                            Message<span class="text-danger">*</span>
-                        </label>
-                        <textarea class="form-control bg-light input-field" name="description_info"
-                            id="description_info" style="height: 120px"></textarea>
+                  </div>
+                </a>
+              </div>
+
+              <div class="row bg-light rounded-4 p-3 m-2">
+                <a href="tel:6588941306" class="text-decoration-none text-black">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="col-3 text-center">
+                      <div class="custom-circle ">
+                        <i class="fa-solid fa-phone"
+                          style="font-size: 30px; padding: 20px; border-radius: 50%; background-color: rgba(0, 123, 255, 0.1);"></i>
+                      </div>
                     </div>
-                    <button type="button" class="btn btn-primary bg-gradient w-100 my-3" id="submitBtn">
-                        Send Message
-                    </button>
-                </form>
+                    <div class="col-9 text-start">
+                      <h5>Phone</h5>
+                      <p>+65 8894 1306</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="row bg-light rounded-4 p-3 m-2">
+                <a href="https://www.google.com/maps/place/The+Alexcier/@1.2916793,103.8137617,17z/data=!3m2!4b1!5s0x31da1a2cf1b2be13:0x7b0f9d88a36fdfbb!4m6!3m5!1s0x31da1bb95520771b:0xf2b9dfa378aa9a6e!8m2!3d1.2916793!4d103.8137617!16s%2Fg%2F11gyxjfkjk?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
+                  class="text-decoration-none text-black" target="_blank">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="col-md-3 col-12 text-center">
+                      <div class="custom-circle ">
+                        <i class="fas fa-building"
+                          style="font-size: 30px; padding: 20px; border-radius: 50%; background-color: rgba(0, 123, 255, 0.1);"></i>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-12 text-start">
+                      <h5>Address</h5>
+                      <p>The Alexcier, 237 Alexandra Road, #04-10, Singapore-159929.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
             </div>
-
-            <div class="col-md-6 text-center">
-                <div class="row">
-                    <img src="./assets/images/container/letsChart.png" alt="Contact" class="img-fluid mb-3 mx-1"
-                        style="border-radius: 35px;background-color: white;">
-                </div>
-
-                <div class="container"  style="border-radius: 35px;background-color: white;">
-                    <div class="card p-3 border-0 ">
-                        <div class="row bg-light rounded-4 p-3 m-2">
-                            <a href="mailto:info@ecscloudinfotech.com" class="text-decoration-none text-black"
-                                target="_blank">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="col-3 text-center">
-                                        <p class="rounded-circle text-bg-primary bg-opacity-10 me-4 py-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm14.832.832L8.232 8.832a.5.5 0 0 1-.464 0L1.168 4.832A.5.5 0 0 1 1.5 4h13a.5.5 0 0 1 .332.832zM8 7a.5.5 0 0 1 .464 0L14 10.5V5.5L8.464 7zM1.5 5.5v5L8 8.5l6.5-2.5v-5L8 7 1.5 5.5z" />
-                                            </svg>
-                                        </p>
-                                    </div>
-                                    <div class="col-9 text-start">
-                                        <h5 class="text-decoration-none text-black">Email</h5>
-                                        <mailto:p>info@ecscloudinfotech.com</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="row bg-light rounded-4 p-3 m-2">
-                            <a href="tel:6588941306" class="text-decoration-none text-black">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="col-3 text-center">
-                                        <p class="rounded-circle text-bg-primary bg-opacity-10 me-4 py-3">
-                                            <i class="fa-solid fa-phone"></i>
-                                        </p>
-                                    </div>
-                                    <div class="col-9 text-start">
-                                        <h5>Phone</h5>
-                                        <p>+65 8894 1306</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="row bg-light rounded-4 p-3 m-2">
-                            <a href="https://www.google.com/maps/place/The+Alexcier/@1.2916793,103.8137617,17z/data=!3m2!4b1!5s0x31da1a2cf1b2be13:0x7b0f9d88a36fdfbb!4m6!3m5!1s0x31da1bb95520771b:0xf2b9dfa378aa9a6e!8m2!3d1.2916793!4d103.8137617!16s%2Fg%2F11gyxjfkjk?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
-                                class="text-decoration-none text-black" target="_blank">
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <div class="col-3 text-center">
-                                        <p class="rounded-circle text-bg-primary bg-opacity-10 me-4 py-3">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 0C5.238 0 3 2.238 3 5c0 3.926 5 11 5 11s5-7.074 5-11c0-2.762-2.238-5-5-5zM8 8.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
-                                            </svg>
-                                        </p>
-                                    </div>
-                                    <div class="col-9 text-start">
-                                        <h5>Address</h5>
-                                        <p>The Alexcier, 237 Alexandra Road, #04-10, Singapore-159929.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="./assets/js/contactus.js"></script>
+  </div>
+  <script src="./assets/js/contactus.js"></script>
 </body>
 
 </html>

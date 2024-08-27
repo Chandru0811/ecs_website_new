@@ -24,6 +24,12 @@ $(document).ready(function () {
         required: true,
         email: true,
       },
+      mobile: {
+        required: true,
+        number: true,
+        minlength: 8,
+        maxlength: 10,
+      },
       description_info: {
         required: true,
       },
@@ -37,6 +43,12 @@ $(document).ready(function () {
         required: "Please enter your email*",
         email: "Please enter a valid email address",
       },
+      mobile: {
+        required: "Please enter your phone number*",
+        number: "Please enter a valid phone number",
+        minlength: "Your phone number must be at least 8 digits long",
+        maxlength: "Your phone number must be at most 10 digits long",
+      },
       description_info: {
         required: "Please enter your message*",
       },
@@ -45,9 +57,11 @@ $(document).ready(function () {
       // Print form values to the console
       var first_name = $("#first_name").val();
       var email = $("#email").val();
+      var number = $("#mobile").val();
       var description_info = $("#description_info").val();
       // showSuccessModal()
       console.log("Name: " + first_name);
+      console.log("Phone Number: " + number);
       console.log("Email: " + email);
       console.log("Description: " + description_info);
 

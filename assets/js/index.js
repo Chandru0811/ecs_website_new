@@ -40,62 +40,63 @@ function handlePlayVideo() {
 
 
 $(document).ready(function () {
-    $("#testForm").validate({
-      rules: {
-        name: {
-          required: true,
-          minlength: 2,
-        },
-        email: {
-          required: true,
-          email: true,
-        },
-        mobile: {
-          required: true,
-          number: true,
-          minlength: 8,
-          maxlength: 10,
-        },
-        message: {
-          required: true,
-        },
+  $("#testForm").validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2,
       },
-      messages: {
-        name: {
-          required: "Please enter your name",
-          minlength: "Your name must be at least 2 characters long",
-        },
-        email: {
-          required: "Please enter your email",
-          email: "Please enter a valid email address",
-        },
-        mobile: {
-          required: "Please enter your phone number",
-          number: "Please enter a valid phone number",
-          minlength: "Your phone number must be at least 8 digits long",
-          maxlength: "Your phone number must be at most 10 digits long",
-        },
-        message: {
-          required: "Please enter your message",
-        },
+      email: {
+        required: true,
+        email: true,
       },
-      submitHandler: function (form) {
-        // Print form values to the console
-        var name = $("#name").val();
-        var email = $("#email").val();
-        var number = $("#mobile").val();
-        var message = $("#message").val();
-  
-        console.log("Name: " + name);
-        console.log("Email: " + email);
-        console.log("Phone Number: " + number);
-        console.log("Message: " + message);
-  
-        // Optionally submit the form
-        // form.submit();
+      mobile: {
+        required: true,
+        number: true,
+        minlength: 8,
+        maxlength: 10,
       },
-    });
+      message: {
+        required: true,
+      },
+    },
+    messages: {
+      name: {
+        required: "Please enter your name*",
+        minlength: "Your name must be at least 2 characters long",
+      },
+      email: {
+        required: "Please enter your email*",
+        email: "Please enter a valid email address",
+      },
+      mobile: {
+        required: "Please enter your phone number*",
+        number: "Please enter a valid phone number",
+        minlength: "Your phone number must be at least 8 digits long",
+        maxlength: "Your phone number must be at most 10 digits long",
+      },
+      message: {
+        required: "Please enter your message*",
+      },
+    },
+    submitHandler: function (form) {
+      // Print form values to the console
+      var name = $("#name").val();
+      var email = $("#email").val();
+      var number = $("#mobile").val();
+      var message = $("#message").val();
+
+      console.log("Name: " + name);
+      console.log("Email: " + email);
+      console.log("Phone Number: " + number);
+      console.log("Message: " + message);
+
+      // Optionally submit the form
+      // form.submit();
+    },
   });
+});
+
 
 
 
