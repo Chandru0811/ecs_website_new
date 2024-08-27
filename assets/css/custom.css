@@ -6,6 +6,62 @@ body {
     background-color: #eeeeee;
 }
 
+
+/* commen css */
+
+.stickySideContactButton {
+    position: fixed;
+    right: calc(25px);
+    top: 55%;
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: right center;
+    padding: 13px 20px;
+    background-color: #ff7f2a;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .stickySideContactButton:hover {
+    background-color: #ff7214;
+  }
+  
+  .whatsappStickySideButton {
+    position: fixed;
+    right: 0;
+    top: 60%;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+    text-align: center;
+  }
+  
+  .whatsappStickySideButton:hover {
+    background-color: #25df69;
+  }
+
+  .num{
+    cursor: pointer;
+    color: black !important;
+    text-wrap: nowrap !important;
+    text-decoration: none !important;
+  }
+
+  .num:hover{
+    color: #2c6bff !important;
+  }
+  
+
 .mainHeading {
     font-size: 18px;
     font-weight: bold;
@@ -166,49 +222,5 @@ body {
 .videoModal .modal-header{
     border-bottom: 0px;
 }
-.stickySideContactButton {
-    position: fixed;
-    right: calc(25px);
-    top: 55%;
-    transform: translateY(-50%) rotate(90deg);
-    transform-origin: right center;
-    padding: 13px 20px;
-    background-color: #ff7f2a;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-  
-  .stickySideContactButton:hover {
-    background-color: #ff7214;
-  }
-  
-  .whatsappStickySideButton {
-    position: fixed;
-    right: 0;
-    top: 60%;
-    background-color: #25d366;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1001;
-    text-align: center;
-    padding-top: 9px;
-  }
-  
-  .whatsappStickySideButton:hover {
-    background-color: #00b141;
-  }
 
-  .num{
-    cursor: pointer;
-  }
-  
+

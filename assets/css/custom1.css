@@ -1,3 +1,4 @@
+/* commen css */
 /* Navbar Styles */
 .mainNav {
   position: fixed;
@@ -16,21 +17,23 @@
   background-color: #2c6bff;
   border-radius: 5px;
 }
-.nav-link.active {
+.navbar-nav .nav-item .nav-link.active {
   color: #fff8e9 !important;
   background-color: #2c6bff;
   border-radius: 5px;
 }
+
 .call-us-btn {
   color: #fff8e9 !important;
-  background-color: #00d570;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 1.2rem;
+  background-color: #00d570 !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  border-radius: 1.2rem !important;
 }
+
 .call-us-btn:hover {
-  background-color: #00c853;
-  border-color: #00c853;
+  background-color: #00c853 !important;
+  border-color: #00c853 !important;
 }
 .contact-number {
   font-weight: 600;
@@ -47,7 +50,7 @@
 }
 
 @media screen and (max-width: 992px) {
-  .nav-toggler .call-us {
+  .nav-toggler .call-us-btn {
     display: none;
   }
   .nav-toggler .num {
