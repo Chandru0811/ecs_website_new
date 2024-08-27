@@ -1,5 +1,6 @@
-/* commen css */
+
 /* Navbar Styles */
+
 .mainNav {
   position: fixed;
   top: 0;
@@ -92,7 +93,7 @@
 
 @media (min-width: 1200px) {
   .liveTag {
-    width: 75%;
+    width: 81%;
   }
 }
 
@@ -167,6 +168,9 @@
   font-weight: 600 !important;
   /* width: 120px; */
 }
+.primaryButton:hover{
+  background-color: #1646b4 !important;
+}
 
 /* Promo1 */
 .sale-pitch-bg-img {
@@ -220,8 +224,7 @@
 }
 
 .form-bg-img {
-  position: absolute;
-  top: 0;
+  top: -33px;
   left: 5px;
   width: 150px; /* Default width */
   height: auto;
