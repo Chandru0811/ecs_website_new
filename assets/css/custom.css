@@ -1,226 +1,224 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #eeeeee;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background-color: #eeeeee;
+}
 
 /* commen css */
 
 .stickySideContactButton {
-    position: fixed;
-    right: calc(25px);
-    top: 55%;
-    transform: translateY(-50%) rotate(90deg);
-    transform-origin: right center;
-    padding: 13px 20px;
-    background-color: #ff7f2a;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-  
-  .stickySideContactButton:hover {
-    background-color: #ff7214;
-  }
-  
-  .whatsappStickySideButton {
-    position: fixed;
-    right: 0;
-    top: 60%;
-    background-color: #25d366;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1001;
-    text-align: center;
-  }
-  
-  .whatsappStickySideButton:hover {
-    background-color: #25df69;
-  }
+  position: fixed;
+  right: calc(25px);
+  top: 55%;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: right center;
+  padding: 13px 20px;
+  background-color: #ff7f2a;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 1000;
+}
 
-  .num{
-    cursor: pointer;
-    color: black !important;
-    text-wrap: nowrap !important;
-    text-decoration: none !important;
-  }
+.stickySideContactButton:hover {
+  background-color: #ff7214;
+}
 
-  .num:hover{
-    color: #2c6bff !important;
-  }
-  
+.whatsappStickySideButton {
+  position: fixed;
+  right: 0;
+  top: 60%;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  text-align: center;
+}
+
+.whatsappStickySideButton:hover {
+  background-color: #25df69;
+}
+
+.num {
+  cursor: pointer;
+  color: black !important;
+  text-wrap: nowrap !important;
+  text-decoration: none !important;
+}
+
+.num:hover {
+  color: #2c6bff !important;
+}
 
 .mainHeading {
-    font-size: 18px;
-    font-weight: bold;
-    color: #1e255e;
-    
+  font-size: 18px;
+  font-weight: bold;
+  color: #1e255e;
 }
 
 .heroList {
-    color: rgba(30, 37, 94, 0.7);
-    font-size: 16px;
-    font-weight: 400;
+  color: rgba(30, 37, 94, 0.7);
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .sale-pitch-button {
-    padding: 15px;
-    border-radius: 15px;
-    background-color: #385fe5;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #385fe5;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 .footerBg {
-    background: linear-gradient(90deg, #1a4ed5 0%, #1c2792 100%);
-    color: var(--client-text-color);
-    padding: 20px 0;
-    color: white;
+  background: linear-gradient(90deg, #1a4ed5 0%, #1c2792 100%);
+  color: var(--client-text-color);
+  padding: 20px 0;
+  color: white;
 }
 
 @media (max-width: 768px) {
+  .mediaIconBg,
+  .mediaIconBg1 {
+    padding: 8px;
+    font-size: 1.3rem;
+  }
 
-    .mediaIconBg,
-    .mediaIconBg1 {
-        padding: 8px;
-        font-size: 1.3rem;
-    }
+  .footerBg p {
+    font-size: 0.85rem;
+  }
 
-    .footerBg p {
-        font-size: 0.85rem;
-    }
-
-    .footer-copyright {
-        flex-direction: column;
-        text-align: center;
-        font-size: 0.9rem;
-    }
+  .footer-copyright {
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 576px) {
+  .mediaIconBg,
+  .mediaIconBg1 {
+    padding: 6px;
+    font-size: 1rem;
+  }
 
-    .mediaIconBg,
-    .mediaIconBg1 {
-        padding: 6px;
-        font-size: 1rem;
-    }
+  .footerBg h2 {
+    font-size: 1.5rem;
+  }
 
-    .footerBg h2 {
-        font-size: 1.5rem;
-    }
+  .footerBg h5 {
+    font-size: 1.2rem;
+  }
 
-    .footerBg h5 {
-        font-size: 1.2rem;
-    }
+  .footerBg p {
+    font-size: 0.8rem;
+  }
 
-    .footerBg p {
-        font-size: 0.8rem;
-    }
+  .footerBg h3 {
+    font-size: 1.2rem;
+  }
 
-    .footerBg h3 {
-        font-size: 1.2rem;
-    }
-
-    .footer-copyright {
-        font-size: 0.8rem;
-    }
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
 }
 
 .modalContent {
-    text-align: center;
+  text-align: center;
 }
 
 .errorHeading {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .errorMagnetSubHeading {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .errorMobile {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .rounded-5 {
-    border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .successHeading {
-    color: #fff;
-    background-color: rgb(0, 184, 0);
-    border-radius: 0px;
+  color: #fff;
+  background-color: rgb(0, 184, 0);
+  border-radius: 0px;
 }
 
 .SuccessMagnetSubHeading {
-    color: #252525;
-    font-weight: 600 !important;
+  color: #252525;
+  font-weight: 600 !important;
 }
 
 .successMagnetButton {
-    background-color: #28a745;
-    border-color: #28a745;
-    color: white;
-    border-radius: 0.5rem;
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+  border-radius: 0.5rem;
 }
 .error {
-    color: #dc3545;
-  }
-  .leadMagnetHeading {
-    color: #1e255e;
-    font-size: 30px;
+  color: #dc3545;
+}
+.leadMagnetHeading {
+  color: #1e255e;
+  font-size: 30px;
 }
 
 .leadMagnetSubHeading {
-    color: #0061fe;
-    font-weight: 600 !important;
+  color: #0061fe;
+  font-weight: 600 !important;
 }
 
 .leadMagnetParagraph {
-    color: rgb(121, 121, 121);
-    font-size: small;
-    font-weight: 400 !important;
+  color: rgb(121, 121, 121);
+  font-size: small;
+  font-weight: 400 !important;
 }
 
 .leadMagenetLable {
-    color: #252525;
-    font-weight: 600 !important;
+  color: #252525;
+  font-weight: 600 !important;
 }
 
 .leadMagenetInput {
-    border-radius: 5px;
-    padding: 10px;
-    border: 1px solid #1e255e;
-    background-color: #0061fe0e;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #1e255e;
+  background-color: #0061fe0e;
 }
 
 .leadMagnetButton {
-    width: 100%;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #0061fe;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #0061fe;
 }
 
 .videoModal .modal-dialog-centered.modal-dialog-scrollable .modal-content {
-    background-color: #252525 !important;
+  background-color: #252525 !important;
 }
 
-.videoModal .modal-header{
-    border-bottom: 0px;
+.videoModal .modal-header {
+  border-bottom: 0px;
 }
-
-
