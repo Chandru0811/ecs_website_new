@@ -91,22 +91,42 @@ $(document).ready(function () {
         description_info: $("#message").val(),
         phone: $("#phone").val(),
       };
-      
+
       $.ajax({
-        url: "https://crmlah.com/ecscrm/api/newClient", 
+        url: "https://crmlah.com/ecscrm/api/newClient",
         type: "POST",
-        contentType: "application/json", 
-        data: JSON.stringify(payload), 
+        contentType: "application/json",
+        data: JSON.stringify(payload),
         success: function (response) {
-          $("#successModal").modal("show"); 
-          $(form).trigger("reset"); 
+          $("#successModal").modal("show");
+          $(form).trigger("reset");
         },
         error: function (xhr, status, error) {
           $("#errorModal").modal("show");
-          $(form).trigger("reset"); 
+          $(form).trigger("reset");
         },
       });
-
+    },
+  });
+});
+$(document).ready(function () {
+  $("#leadMagnetEmail").validate({
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+    },
+    messages: {
+      email: {
+        required: "Please enter your email*",
+        email: "Please enter a valid email address",
+      },
+    },
+    submitHandler: function (form) {
+      var payload = {
+        email: $("#email").val(),
+      };
     },
   });
 });
