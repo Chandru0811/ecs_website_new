@@ -10,8 +10,9 @@
   <link rel="stylesheet" href="./assets/css/custom1.css">
   <link rel="stylesheet" href="./assets/css/contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- jQuery Validation Plugin -->
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 </head>
@@ -84,8 +85,72 @@
           </div>
         </div> -->
 
-  </section>
-  <div class="container my-5">
+  <!-- </section> -->
+  <div class="bots d-flex align-items-center">
+    <!-- <button class="text-light fw-bold ms-2 stickySideContactButton">
+      Contact us
+    </button> -->
+    <i
+      class="fa-brands fa-whatsapp whatsappStickySideButton"
+      style="font-size: 30px"
+    ></i>
+  </div>
+       <!--=== Nav bar ===-->
+       <section id="NavBar" class="container-fluid p-0 py-2 mainNav shadow mx-auto ">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div>
+            <img
+              src="./assets/images/landingpage/logo by me 3 60px 1.png"
+              alt="logo...."
+              class="img-fluid"
+              style="max-width: 180px"
+            />
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-lg-4 mr-auto gap-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#Home">One Click Social Media Posting</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Promo2">SEO Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#Promo3">Social Media Marketing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Promo4">CRM</a>
+              </li>
+            </ul>
+  
+            <form class="form-inline ms-auto pe-0">
+              <a
+                href="tel:+65 8891306"
+                class="me-2 num fw-bold"
+                style="font-size: 24px"
+                >+65 8894 1306</a
+              >
+              <a href="tel:+65 8891306">
+                <button class="btn btn-success call-us-btn" type="button">
+                  Call us
+                </button>
+              </a>
+            </form>
+          </div>
+        </nav>
+      </section>
+  <div class="container my-5 ">
     <div class="row">
       <!-- Form Section -->
       <div class="col-md-6 border rounded-5 bg-white p-5" style="border-radius: 35px;">
@@ -97,41 +162,28 @@
           and we'll respond within 24 hours.
         </p>
         <hr />
-        <form id="contactForm">
-
+        <form id="testForm">
           <div class="mb-3">
-            <label class="my-2">
-              <!-- Name<span class="text-danger">*</span> -->
-            </label>
-            <input type="text" placeholder="Name" class="form-control bg-light input-field" name="first_name"
-              id="first_name" required />
+            <input type="text" name="name" id="name" placeholder="Name" required
+              class="form-control bg-light input-field" />
+            <div class="invalid-feedback mt-0"></div>
           </div>
-
           <div class="mb-3">
-            <label class="my-2">
-              <!-- Work Email<span class="text-danger">*</span> -->
-            </label>
-            <input type="email" class="form-control bg-light input-field" placeholder="Email" name="email" id="email"
-              required />
+            <input required type="email" name="email" id="email" placeholder="Email"
+              class="form-control bg-light input-field" />
+            <div class="invalid-feedback mt-0"></div>
           </div>
-
           <div class="mb-3">
-            <label class="my-2">
-              <!-- Mobile<span class="text-danger">*</span> -->
-            </label>
-            <input type="text" class="form-control bg-light input-field" placeholder="Mobile No" name="mobile"
-              id="mobile" />
+            <input required type="text" name="mobile" id="mobile" placeholder="Mobile No"
+              class="form-control bg-light input-field" />
+            <div class="invalid-feedback mt-0"></div>
           </div>
-
           <div class="mb-3">
-            <label class="my-2">
-              <!-- Message<span class="text-danger">*</span> -->
-            </label>
-            <textarea class="form-control bg-light input-field" placeholder="Leave Us Message" name="description_info"
-              id="description_info" style="height: 120px"></textarea>
+            <textarea required name="message" placeholder="Leave Us Message" id="message"
+              class="form-control bg-light input-field"></textarea>
+            <div class="invalid-feedback mt-0"></div>
           </div>
-
-          <button type="button" class="btn btn-primary bg-gradient w-100 my-3" id="submitBtn">
+          <button type="submit" class="btn btn-primary bg-gradient w-100 my-3">
             Send Message
           </button>
         </form>
@@ -140,7 +192,7 @@
       <div class="col-md-6 text-center">
         <div class="row">
           <div class="col-12">
-            <img src="./assets/images/container/letsChart.png" alt="Contact" class="img-fluid mb-3"
+            <img src="./assets/images/container/simple_bg.webp" alt="Contact" class="img-fluid mb-3"
               style="border-radius: 35px;background-color: white;">
           </div>
           <div class="col-12">
@@ -148,16 +200,16 @@
 
               <div class="row bg-light rounded-4 p-3 m-2">
                 <a href="mailto:info@ecscloudinfotech.com" class="text-decoration-none text-black" target="_blank">
-                  <div class="d-flex justify-content-center align-items-center">
-                    <div class="col-3 text-center">
+                  <div class="d-flex justify-content-start align-items-center">
+                    <div class="col-lg-3 col-md-4  text-start">
                       <div class="custom-circle ">
                         <i class="fas fa-envelope"
                           style="font-size: 30px; padding: 20px; border-radius: 50%; background-color: rgba(0, 123, 255, 0.1);"></i>
                       </div>
                     </div>
-                    <div class="col-9 text-start">
+                    <div class="col-lg-9 col-md-8 text-start">
                       <h5 class="text-decoration-none text-black">Email</h5>
-                      <mailto:p>info@ecscloudinfotech.com</p>
+                      <p class="text-break">info@ecscloudinfotech.com</p>
                     </div>
                   </div>
                 </a>
@@ -165,14 +217,14 @@
 
               <div class="row bg-light rounded-4 p-3 m-2">
                 <a href="tel:6588941306" class="text-decoration-none text-black">
-                  <div class="d-flex justify-content-center align-items-center">
-                    <div class="col-3 text-center">
+                  <div class="d-flex justify-content-start align-items-center">
+                    <div class="col-lg-3 col-md-4 text-start">
                       <div class="custom-circle ">
                         <i class="fa-solid fa-phone"
                           style="font-size: 30px; padding: 20px; border-radius: 50%; background-color: rgba(0, 123, 255, 0.1);"></i>
                       </div>
                     </div>
-                    <div class="col-9 text-start">
+                    <div class="col-lg-9 col-md-8 text-start">
                       <h5>Phone</h5>
                       <p>+65 8894 1306</p>
                     </div>
@@ -183,14 +235,14 @@
               <div class="row bg-light rounded-4 p-3 m-2">
                 <a href="https://www.google.com/maps/place/The+Alexcier/@1.2916793,103.8137617,17z/data=!3m2!4b1!5s0x31da1a2cf1b2be13:0x7b0f9d88a36fdfbb!4m6!3m5!1s0x31da1bb95520771b:0xf2b9dfa378aa9a6e!8m2!3d1.2916793!4d103.8137617!16s%2Fg%2F11gyxjfkjk?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
                   class="text-decoration-none text-black" target="_blank">
-                  <div class="d-flex justify-content-center align-items-center">
-                    <div class="col-md-3 col-12 text-center">
-                      <div class="custom-circle ">
+                  <div class="d-flex justify-content-start align-items-center">
+                    <div class="col-lg-3 col-md-4 text-start">
+                      <div class="custom-circle">
                         <i class="fas fa-building"
-                          style="font-size: 30px; padding: 20px; border-radius: 50%; background-color: rgba(0, 123, 255, 0.1);"></i>
+                          style="font-size: 25px; padding: 20px; border-radius: 50%; background-color: rgba(0, 123, 255, 0.1);"></i>
                       </div>
                     </div>
-                    <div class="col-md-9 col-12 text-start">
+                    <div class="col-lg-9 col-md-8 text-start">
                       <h5>Address</h5>
                       <p>The Alexcier, 237 Alexandra Road, #04-10, Singapore-159929.</p>
                     </div>
@@ -204,7 +256,166 @@
       </div>
     </div>
   </div>
+        <!-- footers -->
+        <section>
+          <div class="container-fluid py-2 pt-5" style="background: linear-gradient(90deg, #1a4ed5 0%, #1c2792 100%);
+            color: white;" id="footer">
+            <div class="row m-0">
+              <div class="col-md-4">
+                <div class="ps-3">
+                  <h3 class="fw-bolder pb-3">ECS</h3>
+                  <h6>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Veritatis aut non accusamus ea, voluptatum adipisci.
+                  </h6>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="ps-3">
+                  <h4 class="fw-bold  pb-3">Our Services</h4>
+                  <p class="text-light">One Click Social Media Posting</p>
+                  <p class="text-light">SEO Services</p>
+                  <p class="text-light">Social Media Marketing</p>
+                  <p class="text-light">CRM</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="ps-3">
+                  <h4 class="fw-bold  pb-3">Contact</h4>
+                  <div class="d-flex align-items-center pb-3">
+                    <a href="tel:88941306" class="text-decoration-none text-white" target="_blank">
+                      <i class="fa-solid fa-phone" style="
+                          font-size: 22px;
+                          background: #faebd754;
+                          padding: 10px;
+                          border-radius: 5px;
+                        "></i>&nbsp;
+                    </a>
+                    <h2 class="fw-bold mt-1">&nbsp;+65 8894 1306</h2>
+                  </div>
+                  <a href="mailto:info@ecscloudinfotech.com" class="text-decoration-none text-white" target="_blank">
+                    <div class="d-flex align-items-center">
+                      <span class="mediaIconBg1 me-2">
+                        <i class="fa-solid fa-envelope" style="
+                              background: #faebd754;
+                              padding: 5px;
+                              border-radius: 5px;
+                              margin-top: 3px;
+                            "></i>
+                      </span>
+                      <p class="mt-3 text-light">info@ecscloudinfotech.com</p>
+                    </div>
+                  </a>
+                  <a href="https://www.google.com/maps/place/The+Alexcier" class="text-decoration-none text-white"
+                    target="_blank">
+                    <div class="d-flex align-items-start">
+                      <span class="mediaIconBg1 me-2">
+                        <i class="fa-solid fa-location-arrow" style="
+                              background: #faebd754;
+                              padding: 5px;
+                              border-radius: 5px;
+                              margin-top: 3px;
+                            "></i>
+                      </span>
+                      <p class="mt-1 text-light">The Alexcier, 237 Alexandra Road, #04-10, Singapore-159929.
+                      </p>
+                    </div>
+                  </a>
+                  <!-- linked icons  -->
+                  <div class="d-flex flex-wrap my-2">
+                    <a href="https://ecscloudinfotech.com/ecs/" class="p-1 text-decoration-none text-white" target="_blank">
+                      <span class="mediaIconBg">
+                        <i class="fa-solid fa-globe" style="
+                          font-size: 22px;
+                          background: #faebd754;
+                          padding: 10px;
+                          border-radius: 5px;
+                        "></i>
+                      </span>
+                    </a>
+      
+                    <a href="https://www.facebook.com/raaj.yuven.3/" class="p-1 text-decoration-none text-white"
+                      target="_blank">
+                      <span class="mediaIconBg">
+                        <i class="fa-brands fa-facebook-f" style="
+                          font-size: 22px;
+                          background: #faebd754;
+                          padding: 10px;
+                          border-radius: 5px;
+                        "></i>
+                      </span>
+                    </a>
+      
+                    <a href="https://x.com/ecscloudinfote2" class="p-1 text-decoration-none text-white" target="_blank">
+                      <span class="mediaIconBg">
+                        <i class="fa-brands fa-x-twitter" style="
+                          font-size: 22px;
+                          background: #faebd754;
+                          padding: 10px;
+                          border-radius: 5px;
+                        "></i>
+                      </span>
+                    </a>
+      
+                    <a href="https://www.youtube.co.in/" class="p-1 text-decoration-none text-white" target="_blank">
+                      <span class="mediaIconBg">
+                        <i class="fa-brands fa-youtube" style="
+                          font-size: 22px;
+                          background: #faebd754;
+                          padding: 10px;
+                          border-radius: 5px;
+                        "></i>
+                      </span>
+                    </a>
+                    <a href="https://www.instagram.com/" class="p-1 text-decoration-none text-white" target="_blank">
+                      <span class="mediaIconBg">
+                        <i class="fa-brands fa-instagram" style="
+                          font-size: 22px;
+                          background: #faebd754;
+                          padding: 10px;
+                          border-radius: 5px;
+                        "></i>
+                      </span>
+                    </a>
+      
+                    <a href="https://www.linkedin.com/in/ecscloudinfotech/" class="p-1 text-decoration-none text-white"
+                      target="_blank">
+                      <span class="mediaIconBg">
+                        <i class="fa-brands fa-linkedin-in" style="
+                          font-size: 22px;
+                          background: #faebd754;
+                          padding: 10px;
+                          border-radius: 5px;
+                        "></i>
+                      </span>
+                    </a>
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+            <hr>
+            <div class="footer-copyright py-2 d-flex flex-column flex-md-row align-items-center justify-content-center">
+              <i class="fa-solid fa-copyright"></i>
+              <p class="mb-0 ms-2 text-light">
+                2024 | All Rights Reserved at
+                <span class="text-primary">ECS Cloud Infotech</span>
+              </p>
+            </div>
+          </div>
+        </section>
+        <button
+        type="button"
+        class="btn btn-floating btn-lg rounded-circle"
+        id="btn-back-to-top"
+      >
+        <i class="fas fa-arrow-up"></i>
+      </button>
   <script src="./assets/js/contactus.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <!-- jQuery Validator -->
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 </body>
 
 </html>

@@ -1,22 +1,7 @@
 $(document).ready(function () {
-  $(".col-md-6")
-    .css({ opacity: 0, marginTop: "-100px" })
-    .animate({ opacity: 1, marginTop: "0px" }, 1200);
-
-  $(window).on("scroll", function () {
-    $(".col-md-6").each(function () {
-      let elementTop = $(this).offset().top;
-      let viewportBottom = $(window).scrollTop() + $(window).height();
-
-      if (elementTop < viewportBottom) {
-        $(this).animate({ opacity: 1, marginLeft: "0px" }, 1200);
-      }
-    });
-  });
-
-  $("#contactForm").validate({
+  $("#testForm").validate({
     rules: {
-      first_name: {
+      name: {
         required: true,
         minlength: 2,
       },
@@ -30,12 +15,12 @@ $(document).ready(function () {
         minlength: 8,
         maxlength: 10,
       },
-      description_info: {
+      message: {
         required: true,
       },
     },
     messages: {
-      first_name: {
+      name: {
         required: "Please enter your name*",
         minlength: "Your name must be at least 2 characters long",
       },
@@ -49,21 +34,21 @@ $(document).ready(function () {
         minlength: "Your phone number must be at least 8 digits long",
         maxlength: "Your phone number must be at most 10 digits long",
       },
-      description_info: {
+      message: {
         required: "Please enter your message*",
       },
     },
     submitHandler: function (form) {
       // Print form values to the console
-      var first_name = $("#first_name").val();
+      var name = $("#name").val();
       var email = $("#email").val();
       var number = $("#mobile").val();
-      var description_info = $("#description_info").val();
-      // showSuccessModal()
-      console.log("Name: " + first_name);
-      console.log("Phone Number: " + number);
+      var message = $("#message").val();
+
+      console.log("Name: " + name);
       console.log("Email: " + email);
-      console.log("Description: " + description_info);
+      console.log("Phone Number: " + number);
+      console.log("Message: " + message);
 
       // Optionally submit the form
       // form.submit();
@@ -88,3 +73,28 @@ function showSuccessModal() {
 function closePopup() {
   $("#successModal").modal("hide");
 }
+  //Get the button
+  let mybutton = document.getElementById("btn-back-to-top");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction();
+  };
+  
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  // When the user clicks on the button, scroll to the top of the document
+  mybutton.addEventListener("click", backToTop);
+  
+  function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
