@@ -6,11 +6,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  background-color: #eeeeee;
-}
-
 /* commen css */
 
 .stickySideContactButton {
@@ -139,21 +134,17 @@ body {
   }
 }
 
-.modalContent {
-  text-align: center;
-}
-
 .errorHeading {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 .errorMagnetSubHeading {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 .errorMobile {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 26px !important;
+  font-weight: bold !important;
 }
 
 .rounded-5 {
@@ -168,21 +159,23 @@ body {
 
 .SuccessMagnetSubHeading {
   color: #252525;
+  font-size: 26px;
   font-weight: 600 !important;
 }
 
 .successMagnetButton {
-  background-color: #28a745;
-  border-color: #28a745;
-  color: white;
-  border-radius: 0.5rem;
+  background-color: #28a745 !important;
+  border-color: #28a745 !important;
+  color: white !important;
+  border-radius: 0.5rem !important;
 }
 .error {
-  color: #dc3545;
+  color: rgb(255, 155, 155) !important;
 }
+
 .leadMagnetHeading {
   color: #1e255e;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .leadMagnetSubHeading {
@@ -221,4 +214,8 @@ body {
 
 .videoModal .modal-header {
   border-bottom: 0px;
+}
+
+#successModal .modal-content, #errorModal .modal-content{
+text-align: center;
 }

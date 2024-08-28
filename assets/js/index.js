@@ -1,43 +1,44 @@
 // navBar
-document.addEventListener('DOMContentLoaded', function() {
-    const offcanvasNavbar = document.getElementById('offcanvasNavbar');
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const offcanvasInstance = new bootstrap.Offcanvas(offcanvasNavbar);
+document.addEventListener("DOMContentLoaded", function () {
+  const offcanvasNavbar = document.getElementById("offcanvasNavbar");
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const offcanvasInstance = new bootstrap.Offcanvas(offcanvasNavbar);
 
-    // Toggle the offcanvas menu when the navbar toggler is clicked
-    navbarToggler.addEventListener('click', function() {
-        offcanvasInstance.toggle();
-    });
+  // Toggle the offcanvas menu when the navbar toggler is clicked
+  navbarToggler.addEventListener("click", function () {
+    offcanvasInstance.toggle();
+  });
 
-    // Ensure correct display of the navbar links on window resize
-    function handleResize() {
-        const screenWidth = window.innerWidth;
-        const navbarCollapse = document.querySelector('.navbar-collapse');
+  // Ensure correct display of the navbar links on window resize
+  function handleResize() {
+    const screenWidth = window.innerWidth;
+    const navbarCollapse = document.querySelector(".navbar-collapse");
 
-        if (screenWidth > 881) { // Larger screens than 881px
-            offcanvasInstance.hide(); // Hide offcanvas if visible
-            navbarCollapse.classList.add('show');
-        } else { // 881px and smaller screens
-            navbarCollapse.classList.remove('show');
-        }
+    if (screenWidth > 881) {
+      // Larger screens than 881px
+      offcanvasInstance.hide(); // Hide offcanvas if visible
+      navbarCollapse.classList.add("show");
+    } else {
+      // 881px and smaller screens
+      navbarCollapse.classList.remove("show");
     }
+  }
 
-    // Initial check
-    handleResize();
+  // Initial check
+  handleResize();
 
-    // Check on window resize
-    window.addEventListener('resize', handleResize);
+  // Check on window resize
+  window.addEventListener("resize", handleResize);
 });
 
 // Home
-const videoImg = document.getElementById('videoImg');
-const videoIframe = document.getElementById('videoIframe');
+const videoImg = document.getElementById("videoImg");
+const videoIframe = document.getElementById("videoIframe");
 
 function handlePlayVideo() {
-  videoImg.style.display = 'none';
-  videoIframe.style.display = 'block';
+  videoImg.style.display = "none";
+  videoIframe.style.display = "block";
 }
-
 
 $(document).ready(function () {
   $("#testForm").validate({
@@ -80,62 +81,71 @@ $(document).ready(function () {
       },
     },
     submitHandler: function (form) {
-      // Print form values to the console
-      var name = $("#name").val();
-      var email = $("#email").val();
-      var number = $("#mobile").val();
-      var message = $("#message").val();
+      var payload = {
+        first_name: $("#name").val().split(" ")[0] || "",
+        last_name: $("#name").val().split(" ")[1] || "",
+        email: $("#email").val(),
+        company_id: 2,
+        company: "ECSCloudInfotech",
+        lead_status: "PENDING",
+        description_info: $("#message").val(),
+        phone: $("#phone").val(),
+      };
+      
+      $.ajax({
+        url: "https://crmlah.com/ecscrm/api/newClient", 
+        type: "POST",
+        contentType: "application/json", 
+        data: JSON.stringify(payload), 
+        success: function (response) {
+          $("#successModal").modal("show"); 
+          $(form).trigger("reset"); 
+        },
+        error: function (xhr, status, error) {
+          $("#errorModal").modal("show");
+          $(form).trigger("reset"); 
+        },
+      });
 
-      console.log("Name: " + name);
-      console.log("Email: " + email);
-      console.log("Phone Number: " + number);
-      console.log("Message: " + message);
-
-      // Optionally submit the form
-      // form.submit();
     },
   });
 });
 
-
-
-
-//   Leadmagnet 
+//   Leadmagnet
 function showLeadMagnetModal() {
-    $('#leadMagnetModal').modal('show');
+  $("#leadMagnetModal").modal("show");
 }
 
 // Function to handle form submission
 function submitLeadMagnet() {
-    var email = document.getElementById('leadMagnetEmail').value;
-    if (email) {
-        alert('Thank you for submitting your email!');
-        $('#leadMagnetModal').modal('hide');
-    } else {
-        alert('Please enter a valid email address.');
-    }
+  var email = document.getElementById("leadMagnetEmail").value;
+  if (email) {
+    alert("Thank you for submitting your email!");
+    $("#leadMagnetModal").modal("hide");
+  } else {
+    alert("Please enter a valid email address.");
+  }
 }
 
 function showErrorModal() {
-    $("#errorModal").modal("show");
-  }
-  function closePopup() {
-    $("#errorModal").modal("hide");
-  }
+  $("#errorModal").modal("show");
+}
+function closePopup() {
+  $("#errorModal").modal("hide");
+}
 //   document.addEventListener("click", function () {
 //     showErrorModal(false);
 //   });
 
-  function showSuccessModal() {
-    $("#successModal").modal("show");
-  }
+function showSuccessModal() {
+  $("#successModal").modal("show");
+}
 
-  function closePopup() {
-    $("#successModal").modal("hide");
-  }
+function closePopup() {
+  $("#successModal").modal("hide");
+}
 
-
-  //Get the button
+//Get the button
 let mybutton = document.getElementById("btn-back-to-top");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -144,10 +154,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";

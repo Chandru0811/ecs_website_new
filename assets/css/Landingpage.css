@@ -11,7 +11,7 @@
 .mainNav {
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 999 !important;
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px) !important;
 }
@@ -93,7 +93,7 @@
 
 @media (min-width: 1200px) {
   .liveTag {
-    width: 81% !important;
+    width: 77% !important;
   }
 }
 
@@ -127,7 +127,7 @@
 }
 
 .imageText img {
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
 .imageText {
@@ -225,19 +225,19 @@
   top: 0;
   left: 5px;
   right: auto;
-  width: 150px; 
+  width: 150px;
   height: auto;
 }
 
 @media (max-width: 768px) {
   .form-bg-img {
-    width: 100px; 
+    width: 100px;
   }
 }
 
 @media (max-width: 576px) {
   .form-bg-img {
-    width: 100px; 
+    width: 100px;
   }
 }
 .finalAttemptBackground {
@@ -258,7 +258,7 @@
   font-weight: bolder;
 }
 .error {
-  color: red !important;
+  color: rgb(255, 155, 155) !important;
 }
 .stickySideContactButton {
   position: fixed;
@@ -300,20 +300,37 @@
 .whatsappStickySideButton:hover {
   background-color: #25df69;
 }
-.num{
+.num {
   cursor: pointer;
   color: black !important;
   text-wrap: nowrap !important;
   text-decoration: none !important;
 }
 
-.num:hover{
+.num:hover {
   color: #2c6bff !important;
 }
+
 #btn-back-to-top {
   position: fixed !important;
   bottom: 20px !important;
   right: 20px !important;
   color: #fff !important;
   background: #2c6bff !important;
+}
+
+.leadMagenetInput {
+  border-radius: 5px !important;
+  padding: 20px 10px !important;
+  border: 1px solid #1e255e !important;
+  background-color: #0061fe0e !important;
+}
+
+.modal-header {
+  border-bottom: 0px !important;
+}
+
+#successModal .modal-content,
+#errorModal .modal-content {
+  text-align: center;
 }

@@ -39,62 +39,54 @@ $(document).ready(function () {
       },
     },
     submitHandler: function (form) {
-      // Print form values to the console
-      var name = $("#name").val();
-      var email = $("#email").val();
-      var number = $("#mobile").val();
-      var message = $("#message").val();
+      var payload = {
+        first_name: $("#name").val().split(" ")[0] || "",
+        last_name: $("#name").val().split(" ")[1] || "",
+        email: $("#email").val(),
+        company_id: 2,
+        company: "ECSCloudInfotech",
+        lead_status: "PENDING",
+        description_info: $("#message").val(),
+        phone: $("#phone").val(),
+      };
 
-      console.log("Name: " + name);
-      console.log("Email: " + email);
-      console.log("Phone Number: " + number);
-      console.log("Message: " + message);
-
-      // Optionally submit the form
-      // form.submit();
+      $.ajax({
+        url: "https://crmlah.com/ecscrm/api/newClient",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(payload),
+        success: function (response) {
+          $("#successModal").modal("show");
+          $(form).trigger("reset");
+        },
+        error: function (xhr, status, error) {
+          $("#errorModal").modal("show");
+          $(form).trigger("reset");
+        },
+      });
     },
   });
 });
 
-function showErrorModal() {
-  $("#errorModal").modal("show");
-}
-function closePopup() {
-  $("#errorModal").modal("hide");
-}
-//   document.addEventListener("click", function () {
-//     showErrorModal(false);
-//   });
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
 
-function showSuccessModal() {
-  $("#successModal").modal("show");
-}
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
 
-function closePopup() {
-  $("#successModal").modal("hide");
-}
-  //Get the button
-  let mybutton = document.getElementById("btn-back-to-top");
-
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function () {
-    scrollFunction();
-  };
-  
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
-    ) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
   }
-  // When the user clicks on the button, scroll to the top of the document
-  mybutton.addEventListener("click", backToTop);
-  
-  function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

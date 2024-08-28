@@ -4,7 +4,7 @@
 .mainNav {
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px) !important;
 }
@@ -228,7 +228,7 @@
 .mainNav {
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px) !important;
 }
@@ -328,4 +328,15 @@
   right: 20px !important;
   color: #fff !important;
   background: #2c6bff !important;
+}
+
+.leadMagenetInput {
+  border-radius: 5px !important;
+  padding: 20px 10px !important;
+  border: 1px solid #1e255e !important;
+  background-color: #0061fe0e !important;
+}
+
+.modal-header {
+  border-bottom: 0px !important;
 }
