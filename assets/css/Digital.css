@@ -216,30 +216,6 @@
     color: #0061fe;
   }
 
-  .liveTag {
-    /* margin-left: 5px; */
-    /* padding: 0 0 0 340px; */
-
-  }
-
-  @media (min-width: 1200px) {
-    .liveTag {
-      width: 75%;
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 992px) {
-    .liveTag {
-      width: 140%;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .liveTag {
-      width: 100%;
-    }
-  }
-
   @media (max-width: 450px) {
     .oneClick {
       font-size: 60px;

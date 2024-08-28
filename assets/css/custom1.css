@@ -87,28 +87,6 @@
   color: #0061fe;
 }
 
-.liveTag {
-  margin-left: 5px; /* Adjust space between "One Click" and "& Live" */
-}
-
-@media (min-width: 1200px) {
-  .liveTag {
-    width: 81%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .liveTag {
-    width: 140%;
-  }
-}
-
-@media (max-width: 767px) {
-  .liveTag {
-    width: 100%;
-  }
-}
-
 @media (max-width: 450px) {
   .oneClick {
     font-size: 60px;
