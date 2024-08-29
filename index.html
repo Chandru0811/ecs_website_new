@@ -33,6 +33,11 @@
     data-offset="50"
   >
     <!--==Contantus btn whatup btn===-->
+    <img
+      src="./assets/images/landingpage/free orange.png"
+      class="free-orange"
+      id="openLeadMagnetModal"
+    />
     <div class="bots d-flex align-items-center">
       <a href="contactus.html">
         <button class="text-light ms-2 stickySideContactButton">
@@ -133,7 +138,7 @@
           <div
             class="col-md-6 col-sm-6 col-12 d-flex flex-column justify-content-center"
           >
-            <h1 class="mainHeading2">
+            <h1 class="mainHeading">
               Digital Marketing Services in Singapore
             </h1>
             <div class="">
@@ -214,10 +219,10 @@
                 LinkedIn, Facebook, Instagram, YouTube, TikTok, X - we cover
                 them all
               </p> -->
-            <h4 class="fw-bold mt-3" style="font-size: 32px">
-              SEO SERVICES&nbsp; | &nbsp;SOCIAL MEDIA MARKETING&nbsp; |
-              &nbsp;CRM
-            </h4>
+              <h4 class="fw-bold mt-3 d-flex justify-content-center" style="font-size: 32px">
+                SEO SERVICES&nbsp; |<br class="br" /> SOCIAL MEDIA MARKETING&nbsp; | <br class="br" />
+                CRM
+              </h4>
             <br />
             <div class="container">
               <p
@@ -359,7 +364,7 @@
             class="img-fluid card shadow"
           />
         </div>
-        <div class="col-12 col-md-5 mt-md-3 mb-2 mb-lg-0 mb-md-0">
+        <div class="col-12 col-md-5 mt-3 mt-md-0 mt-lg-0 mb-2 mb-lg-0 mb-md-0">
           <!-- <div class=""> -->
           <!-- <img src="./assets/images/container/Icon.png" alt="..." class="img-fluid mb-2" style="width: 47px" /> -->
           <div>
@@ -405,7 +410,7 @@
             <div>
               <h2 class="mainHeading">Take social media seriously</h2>
               <h3 class="fw-semibold my-3" style="color: #006db7">
-                Act today! Get more customers and <br />
+                Get more customers and <br />
                 orders for free
               </h3>
               <ul class="heroList">
@@ -460,7 +465,7 @@
             <div>
               <h2 class="mainHeading">Social Media campaigns are tough</h2>
               <h3 class="fw-semibold my-3" style="color: #006db7">
-                Let us, our CRM, simplify it for you
+                Let our CRM simplify it for you
               </h3>
               <ul class="heroList">
                 <li class="pb-1">
@@ -666,7 +671,11 @@
             <!-- Back to Home Button -->
             <a href="./index.html">
               <button class="btn successMagnetButton">
-                <i class="fas fa-arrow m-0-left"></i> Back to Home
+                <img
+                  src="./assets/images/landingpage/back.png"
+                  class="back-img"
+                />
+                Back to Ecs
               </button>
             </a>
           </div>
@@ -676,62 +685,63 @@
 
     <!-- LEADMagnet Model -->
     <div
-      class="modal fade"
-      id="leadMagnetModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="leadMagnetModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content modalContent">
-          <div class="modal-header">
-            <h5 class="modal-title leadMagnetHeading" id="leadMagnetModalLabel">
-              Are you ready to tame Google ?
-            </h5>
-            <button
-              type="button"
-              class="close"
-              id="closePopupButton"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body pt-0">
-            <p class="mb-0 leadMagnetSubHeading">
-              Use Google and Get New Customers and Orders
-            </p>
-            <p class="leadMagnetParagraph">
-              Use our specially designed Ebook to get tips to win Google, get
-              quality traffic and leads for free.
-            </p>
-            <form id="leadMagnetEmail">
-              <div class="mb-3">
-                <label for="email" class="form-label leadMagenetLable"
-                  >Work Email</label
-                >
-                <input
-                  required
-                  type="email"
-                  name="email"
-                  id="leadMagnetEmailInput"
-                  placeholder="What's your email?"
-                  class="form-control leadMagenetInput"
-                />
-              </div>
+    class="modal fade"
+    id="leadMagnetModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="leadMagnetModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content modalContent px-3 pb-3 pt-0" style="background-color: #e2f2ff;">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title leadMagnetHeading" id="leadMagnetModalLabel">
+            Are you ready to tame Google ?
+          </h5> -->
+          <button
+            type="button"
+            class="close pe-0"
+            id="closePopupButton"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body pt-2 text-center">
+          <h4 class="modal-title fw-bold leadMagnetHeading mb-3" id="leadMagnetModalLabel">
+            Are you ready to tame Google ?
+          </h4>
+          <p class="mb-0 fw-bold leadMagnetSubHeading mb-1">
+            Use Google and Get New Customers and Orders
+          </p>
+          <small class="leadMagnetParagraph">
+            Use our specially designed Ebook to get tips to win Google, get
+            quality traffic and leads for free.
+          </small>
+          <form id="leadMagnetEmail mt-2">
+            <div class="mb-3 mt-3">
+              
+              <input
+                required
+                type="email"
+                name="email"
+                id="leadMagnetEmailInput"
+                placeholder="Work Email"
+                class="form-control leadMagenetInput"
+              />
+            </div>
 
-              <!-- <p class="leadMagnetParagraph">
-            By submitting my personal data, I agree to the Terms & Conditions
-            of ECS Cloud Infotech Pvt Ltd.
-          </p> -->
-          <button type="submit" class="btn leadMagnetButton btn-primary">Submit</button>
-            </form>
-          </div>
+            <!-- <p class="leadMagnetParagraph">
+          By submitting my personal data, I agree to the Terms & Conditions
+          of ECS Cloud Infotech Pvt Ltd.
+        </p> -->
+        <button type="submit" class="btn leadMagnetButton btn-success my-2">Downlod pre E-Book</button>
+          </form>
         </div>
       </div>
     </div>
+  </div>
     <!-- footers -->
     <section>
       <div
@@ -964,7 +974,7 @@
     </section>
     <button
       type="button"
-      class="btn btn-floating btn-lg rounded-circle"
+      class="btn btn-floating btn-lg rounded-circle scrollBtn"
       id="btn-back-to-top"
     >
       <i class="fas fa-arrow-up"></i>

@@ -112,38 +112,72 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   $(document).ready(function () {
-  $("#leadMagnetEmail").validate({
-    rules: {
-      email: {
-        required: true,
-        email: true,
+    $("#leadMagnetEmail").validate({
+      rules: {
+        email: {
+          required: true,
+          email: true,
+        },
       },
-    },
-    messages: {
-      email: {
-        required: "Please enter your email*",
-        email: "Please enter a valid email address",
+      messages: {
+        email: {
+          required: "Please enter your email*",
+          email: "Please enter a valid email address",
+        },
       },
-    },
-    submitHandler: function (form) {
-      var emailValue = $("#leadMagnetEmailInput").val();
-      console.log("Submitted email:", emailValue);
-
-      var link = document.createElement('a');
-      link.href = './assets/images/landingpage/pdf.pdf';
-      link.target = '_blank';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      $("#successModal").modal("show");
-      $("#leadMagnetModal").modal("hide");
-      $(form).trigger("reset");
-    },
-  });
-});
+      submitHandler: function (form) {
+        var emailValue = $("#leadMagnetEmailInput").val();
+        console.log("Submitted email:", emailValue);
   
+        var payload = {
+          email: emailValue,
+          company_id: 2,
+          company: "ECSCloudInfotech",
+          lead_status: "PENDING",
+        };
+  
+        // Make the AJAX call
+        $.ajax({
+          url: "https://crmlah.com/ecscrm/api/newClient",
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(payload),
+          success: function (response) {
+            // On success, show the success modal
+            $("#successModal").modal("show");
+  
+            // Open the PDF in a new tab
+            var link = document.createElement('a');
+            link.href = './assets/images/landingpage/pdf.pdf';
+            link.target = '_blank';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+  
+            // Reset the form
+            $(form).trigger("reset");
+          },
+          error: function (xhr, status, error) {
+            // On error, show the error modal
+            $("#errorModal").modal("show");
+  
+            // Reset the form
+            $(form).trigger("reset");
+          },
+        });
+  
+        // Close the lead magnet modal
+        $("#leadMagnetModal").modal("hide");
+      },
+    });
+  });
+  
+
   //   Leadmagnet
+$("#openLeadMagnetModal").click(function () {
+  $("#leadMagnetModal").modal("show");
+});
+
   function showLeadMagnetModal() {
     $("#leadMagnetModal").modal("show");
   }
