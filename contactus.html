@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./assets/css/custom.css">
-  <link rel="stylesheet" href="./assets/css/custom1.css">
-  <link rel="stylesheet" href="./assets/css/contact.css">
+  <!-- <link rel="stylesheet" href="./assets/css/custom1.css">
+  <link rel="stylesheet" href="./assets/css/contact.css"> -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -335,7 +335,7 @@
                 </span>
               </a>
 
-              <a href="https://www.facebook.com/raaj.yuven.3/" class="p-1 text-decoration-none text-white"
+              <a href="https://www.facebook.com/ecscloud/?_rdr" class="p-1 text-decoration-none text-white"
                 target="_blank">
                 <span class="mediaIconBg">
                   <i class="fa-brands fa-facebook-f" style="
@@ -494,17 +494,14 @@
             Use our specially designed Ebook to get tips to win Google, get
             quality traffic and leads for free.
           </p>
-          <div class="mb-3">
-            <label for="leadMagnetEmail" class="form-label leadMagenetLable">Work Email</label>
-            <input type="email" class="form-control leadMagenetInput" id="leadMagnetEmail" placeholder="" />
-          </div>
-          <!-- <p class="leadMagnetParagraph">
-                By submitting my personal data, I agree to the Terms & Conditions
-                of ECS Cloud Infotech Pvt Ltd.
-              </p> -->
-          <button type="button" class="btn leadMagnetButton btn-primary">
-            Submit
-          </button>
+          <form id="leadMagnetEmail">
+            <div class="mb-3">
+              <label for="email" class="form-label leadMagenetLable">Work Email</label>
+              <input required type="email" name="email" id="leadMagnetEmailInput" placeholder="What's your email?" class="form-control leadMagenetInput" />
+            </div>
+            <button type="submit" class="btn leadMagnetButton btn-primary">Submit</button>
+          </form>
+          
         </div>
       </div>
     </div>
@@ -545,7 +542,7 @@
       $("#successModal").modal("hide");
     }
   </script>
-  <script src="./assets/js/contactus.js"></script>
+  <!-- <script src="./assets/js/contactus.js"></script> -->
   <script src="assets/js/jquery-3.6.0.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <!-- jQuery -->
