@@ -88,7 +88,7 @@
 }
 
 .liveTag {
-  margin-left: 5px;
+  margin-bottom: -10px !important;
 }
 
 @media (min-width: 1200px) {
@@ -222,8 +222,9 @@
 }
 
 .form-bg-img {
-  top: 0;
-  left: 5px;
+  position: absolute;
+  top: 50 !important;
+  right: 0;
   right: auto;
   width: 150px;
   height: auto;
@@ -333,4 +334,8 @@
 #successModal .modal-content,
 #errorModal .modal-content {
   text-align: center;
+}
+
+.whiteLink{
+  color: #fff;
 }
