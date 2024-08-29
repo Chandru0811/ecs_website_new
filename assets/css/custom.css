@@ -67,7 +67,7 @@
 
 /* / Home / */
 .heroBackground {
-  background: url("../images/landingpage/singapore_map.svg");
+  background: url("../images/landingpage/Singapore\ map.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -189,7 +189,7 @@
 }
 
 .sale-pitch-container {
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto;
 }
 
@@ -301,6 +301,24 @@
 .whatsappStickySideButton:hover {
   background-color: #25df69;
 }
+@media (min-width: 768px) {
+  .br{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .scrollBtn{
+    display: none !important;
+  }
+  .whatsappStickySideButton{
+    top: 87%;
+  }
+  .stickySideContactButton{
+    top: 85%;
+  } 
+}
 .num {
   cursor: pointer;
   color: black !important;
@@ -321,10 +339,24 @@
 }
 
 .leadMagenetInput {
+   width: 85% !important;
+   margin: auto;
   border-radius: 5px !important;
   padding: 20px 10px !important;
-  border: 1px solid #1e255e !important;
-  background-color: #0061fe0e !important;
+  border: 1px solid #026bab !important;
+  background-color: #ffffff0e !important;
+}
+.leadMagnetHeading{
+  color: #25495f;
+}
+.leadMagnetSubHeading{
+color: #5b87aa;
+}
+.leadMagnetParagraph{
+  color: #839fb6;
+}
+.leadMagnetButton{
+
 }
 
 .modal-header {
@@ -351,4 +383,54 @@ body {
 
 .whiteLink{
   color: #fff;
+}
+.errorHeading {
+  border-bottom: none !important;
+}
+
+.errorMagnetSubHeading {
+  font-size: 16px !important;
+}
+
+.errorMobile {
+  font-size: 26px !important;
+  font-weight: bold !important;
+}
+
+#successModal .modal-content, #errorModal .modal-content{
+  text-align: center;
+  }
+
+.free-orange{
+  position: fixed;
+  z-index: 1001;
+  right: 0;
+  top: 15%;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.successHeading{
+  background: #28a745;
+  color: #fff;
+}
+.successMagnetButton{
+  color: #28a745 !important;
+  position: relative;
+}
+.successMagnetButton i {
+  transition: transform 0.3s ease;
+}
+
+.successMagnetButton:hover .back-img {
+  color: #06611b;
+  transform: translateX(-4px);
+}
+.successMagnetButton:hover{
+  color: #003b19;
+}
+.back-img{
+  width: 20px;
 }
